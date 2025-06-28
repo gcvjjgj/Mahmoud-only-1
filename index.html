@@ -1,0 +1,1643 @@
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستر محمود حمد - مدرس أول لغة إنجليزية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- الصفحة الرئيسية -->
+        <div id="homePage" class="page active">
+            <div class="hero-section">
+                <div class="particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+                <div class="overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">مستر محمود حمد</h1>
+                    <p class="hero-subtitle">مدرس أول لغة إنجليزية</p>
+                    <p class="hero-description">تحت رعاية: وهبة</p>
+                    
+                    <div class="main-buttons">
+                        <button class="main-btn" data-target="studentPage">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>طالب</span>
+                        </button>
+                        
+                        <button class="main-btn" data-target="supportPage">
+                            <i class="fas fa-tools"></i>
+                            <span>دعم فني</span>
+                        </button>
+                        
+                        <button class="main-btn" data-target="teacherPage">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>مدرس</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- صفحة الطالب -->
+        <div id="studentPage" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="homePage">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>👨‍🎓 واجهة الطالب</h2>
+                <div class="theme-toggle">
+                    <button class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="auth-container">
+                <div class="auth-buttons">
+                    <button class="auth-btn" data-target="studentLogin">
+                        <i class="fas fa-sign-in-alt"></i>
+                        لدي حساب
+                    </button>
+                    
+                    <button class="auth-btn" data-target="studentRegister">
+                        <i class="fas fa-user-plus"></i>
+                        إنشاء حساب
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة تسجيل دخول الطالب -->
+        <div id="studentLogin" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentPage">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🔹 لدي حساب</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>الاسم الرباعي</label>
+                        <input type="text" id="loginName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        تسجيل الدخول
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- صفحة إنشاء حساب الطالب -->
+        <div id="studentRegister" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentPage">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🔹 إنشاء حساب</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label>الاسم الرباعي</label>
+                        <input type="text" id="registerName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>رقم الطالب</label>
+                        <input type="text" id="studentNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>رقم ولي الأمر</label>
+                        <input type="tel" id="parentPhone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>تأكيد كلمة المرور</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>اختيار الصف الدراسي</label>
+                        <select id="gradeSelect" required>
+                            <option value="">اختر الصف</option>
+                            <option value="first">الأول الثانوي</option>
+                            <option value="second">الثاني الثانوي</option>
+                            <option value="third">الثالث الثانوي</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-user-plus"></i>
+                        إنشاء الحساب
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- لوحة تحكم الطالب -->
+        <div id="studentDashboard" class="page">
+            <div class="page-header">
+                <button class="back-btn" onclick="window.app.logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+                <h2>🎛️ لوحة الطالب</h2>
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count" id="notificationCount">0</span>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card" data-target="paidLessons">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>الحصص المدفوعة</h3>
+                    <p>شاهد الحصص المدفوعة وادرس بتفاعل</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="subscriptions">
+                    <i class="fas fa-receipt"></i>
+                    <h3>الاشتراكات</h3>
+                    <p>اشترك في الباقات الشهرية</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="books">
+                    <i class="fas fa-book"></i>
+                    <h3>الكتب</h3>
+                    <p>اطلب الكتب المدرسية</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="studentSupport">
+                    <i class="fas fa-headset"></i>
+                    <h3>الدعم الفني</h3>
+                    <p>تواصل مع فريق الدعم</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="wallet">
+                    <i class="fas fa-wallet"></i>
+                    <h3>المحفظة</h3>
+                    <p>شحن الرصيد وإدارة المدفوعات</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="activityLog">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>سجل النشاط</h3>
+                    <p>تتبع تقدمك الدراسي</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="notifications">
+                    <i class="fas fa-bell"></i>
+                    <h3>الإشعارات</h3>
+                    <p>رسائل مهمة من المدرس والدعم</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="rewards">
+                    <i class="fas fa-trophy"></i>
+                    <h3>المكافآت</h3>
+                    <p>اجمع النقاط واحصل على حصص مجانية</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة الدعم الفني -->
+        <div id="supportPage" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="homePage">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🧑‍🔧 واجهة الدعم الفني</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="supportLoginForm">
+                    <div class="form-group">
+                        <label>الاسم الثلاثي</label>
+                        <input type="text" id="supportName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>الكود</label>
+                        <input type="text" id="supportCode" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        تسجيل الدخول
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- لوحة تحكم الدعم الفني -->
+        <div id="supportDashboard" class="page">
+            <div class="page-header">
+                <button class="back-btn" onclick="window.app.logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+                <h2>لوحة تحكم الدعم الفني</h2>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card" data-target="confirmPayments">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>تأكيد عمليات الدفع</h3>
+                    <p>مراجعة وتأكيد تحويلات الطلاب</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="banStudentsSupport">
+                    <i class="fas fa-user-slash"></i>
+                    <h3>حظر الطلاب</h3>
+                    <p>إدارة حظر ورفع حظر الطلاب</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="studentOperations">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>عمليات الطلاب</h3>
+                    <p>عرض رصيد ونشاط الطلاب</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="supportChat">
+                    <i class="fas fa-comments"></i>
+                    <h3>دردشة مع الطلاب</h3>
+                    <p>استقبال والرد على رسائل الطلاب</p>
+                </div>
+                
+                <div class="dashboard-card" data-target="examGrades">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>درجات الامتحانات</h3>
+                    <p>عرض وإدارة درجات الطلاب</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة المدرس -->
+        <div id="teacherPage" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="homePage">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>👨‍🏫 واجهة المعلم</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="teacherLoginForm">
+                    <div class="form-group">
+                        <label>الاسم</label>
+                        <input type="text" id="teacherName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>كود الدخول</label>
+                        <input type="text" id="teacherCode" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>رقم الدخول</label>
+                        <input type="tel" id="teacherPhone" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        تسجيل الدخول
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- لوحة تحكم المعلم -->
+        <div id="teacherDashboard" class="page">
+            <div class="page-header">
+                <button class="back-btn" onclick="window.app.logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+                <h2>لوحة تحكم المعلم</h2>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card" data-target="manageLessons">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>إدارة الحصص</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="manageSubscriptions">
+                    <i class="fas fa-box"></i>
+                    <h3>إدارة الاشتراكات</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="supportManagement">
+                    <i class="fas fa-eye"></i>
+                    <h3>مراقبة الدعم الفني</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="transferOperations">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>عرض عمليات التحويل</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="paymentMethods">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>إدارة وسائل الدفع</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="generalMessages">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>رسائل عامة للطلاب</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="manageBooks">
+                    <i class="fas fa-book"></i>
+                    <h3>إدارة الكتب</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="studentMessages">
+                    <i class="fas fa-comments"></i>
+                    <h3>رسائل الطلاب</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="banStudents">
+                    <i class="fas fa-ban"></i>
+                    <h3>حظر الطلاب</h3>
+                </div>
+                
+                <div class="dashboard-card" data-target="editBackground">
+                    <i class="fas fa-image"></i>
+                    <h3>تعديل صورة الصفحات</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة الحصص المدفوعة -->
+        <div id="paidLessons" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>💡 الحصص المدفوعة</h2>
+            </div>
+            
+            <div class="lessons-container">
+                <div class="balance-display">
+                    <div class="balance-card">
+                        <i class="fas fa-wallet"></i>
+                        <div class="balance-info">
+                            <h3>رصيدك الحالي</h3>
+                            <p id="currentBalance">0 جنيه</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grade-filter">
+                    <h3>اختر الصف الدراسي</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" onclick="filterLessonsByGrade('all')">جميع الصفوف</button>
+                        <button class="filter-btn" onclick="filterLessonsByGrade('first')">الأول الثانوي</button>
+                        <button class="filter-btn" onclick="filterLessonsByGrade('second')">الثاني الثانوي</button>
+                        <button class="filter-btn" onclick="filterLessonsByGrade('third')">الثالث الثانوي</button>
+                    </div>
+                </div>
+                
+                <div id="lessonsGrid" class="lessons-grid">
+                    <!-- الحصص ستظهر هنا -->
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة محتوى الحصة -->
+        <div id="lessonContent" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="paidLessons">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2 id="lessonTitle">محتوى الحصة</h2>
+            </div>
+            
+            <div class="lesson-content-container">
+                <div class="lesson-info">
+                    <div id="lessonDetails"></div>
+                </div>
+                
+                <div class="lesson-materials">
+                    <div class="material-section" id="videoSection" style="display: none;">
+                        <h3><i class="fas fa-play-circle"></i> فيديو الشرح</h3>
+                        <video id="lessonVideo" controls style="width: 100%; max-height: 400px;">
+                            <source src="" type="video/mp4">
+                            متصفحك لا يدعم تشغيل الفيديو
+                        </video>
+                    </div>
+                    
+                    <div class="material-section" id="pdfSection" style="display: none;">
+                        <h3><i class="fas fa-file-pdf"></i> ملف الشرح</h3>
+                        <button id="viewPdfBtn" class="material-btn">
+                            <i class="fas fa-eye"></i>
+                            عرض ملف الشرح
+                        </button>
+                    </div>
+                    
+                    <div class="material-section" id="homeworkSection" style="display: none;">
+                        <h3><i class="fas fa-tasks"></i> الواجب</h3>
+                        <button id="viewHomeworkBtn" class="material-btn">
+                            <i class="fas fa-download"></i>
+                            تحميل الواجب
+                        </button>
+                    </div>
+                    
+                    <div class="material-section" id="solutionSection" style="display: none;">
+                        <h3><i class="fas fa-check-circle"></i> حل الواجب</h3>
+                        <button id="viewSolutionBtn" class="material-btn">
+                            <i class="fas fa-eye"></i>
+                            عرض حل الواجب (ملف)
+                        </button>
+                        <button id="viewSolutionVideoBtn" class="material-btn" style="display: none;">
+                            <i class="fas fa-video"></i>
+                            عرض حل الواجب (فيديو)
+                        </button>
+                    </div>
+                    
+                    <div class="material-section" id="examSection">
+                        <h3><i class="fas fa-clipboard-check"></i> امتحان الحصة</h3>
+                        <p>يجب اجتياز الامتحان للانتقال للحصة التالية</p>
+                        <button id="startExamBtn" class="exam-btn">
+                            <i class="fas fa-play"></i>
+                            بدء الامتحان
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="question-section">
+                    <h3><i class="fas fa-question-circle"></i> إرسال سؤال للمدرس</h3>
+                    <form id="questionForm">
+                        <div class="form-group">
+                            <label>موضوع السؤال</label>
+                            <input type="text" id="questionSubject" placeholder="اكتب موضوع السؤال" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>نص السؤال</label>
+                            <textarea id="questionText" rows="4" placeholder="اكتب سؤالك هنا..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>رفع صورة (اختياري)</label>
+                            <input type="file" id="questionImage" accept="image/*">
+                            <div id="imagePreview" style="display: none;">
+                                <img id="previewImg" style="max-width: 200px; max-height: 200px; border-radius: 8px;">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال السؤال
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- نافذة الامتحان -->
+        <div id="examModal" class="modal" style="display: none;">
+            <div class="modal-content exam-modal">
+                <div class="exam-header">
+                    <h3 id="examTitle">امتحان الحصة</h3>
+                    <div class="exam-timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="examTimer">30:00</span>
+                    </div>
+                </div>
+                
+                <div id="examQuestions" class="exam-questions">
+                    <!-- أسئلة الامتحان ستظهر هنا -->
+                </div>
+                
+                <div class="exam-controls">
+                    <button id="submitExamBtn" class="submit-btn">
+                        <i class="fas fa-check"></i>
+                        تسليم الامتحان
+                    </button>
+                    <button id="closeExamBtn" class="cancel-btn" onclick="closeExamModal()">
+                        <i class="fas fa-times"></i>
+                        إغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة إدارة الحصص -->
+        <div id="manageLessons" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>📚 إدارة الحصص</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="uploadLessonForm">
+                    <h3 id="lessonFormTitle">📥 إضافة حصة جديدة</h3>
+                    <input type="hidden" id="editingLessonId">
+
+                    <div class="form-group">
+                        <label>عنوان الحصة</label>
+                        <input type="text" id="lessonFormTitleInput" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>السعر</label>
+                        <input type="number" id="lessonPrice" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>الوصف</label>
+                        <textarea id="lessonDescription" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>الصف الدراسي</label>
+                        <select id="lessonGrade" required>
+                            <option value="">اختر الصف</option>
+                            <option value="first">الأول الثانوي</option>
+                            <option value="second">الثاني الثانوي</option>
+                            <option value="third">الثالث الثانوي</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>صورة غلاف الحصة</label>
+                        <input type="file" id="lessonCover" accept="image/*">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>فيديو الشرح</label>
+                        <input type="file" id="lessonVideoFile" accept="video/*">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>ملف PDF للشرح</label>
+                        <input type="file" id="lessonPDF" accept=".pdf">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>ملف الواجب</label>
+                        <input type="file" id="homeworkPDF" accept=".pdf">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>ملف حل الواجب</label>
+                        <input type="file" id="homeworkSolutionPDF" accept=".pdf">
+                    </div>
+
+                    <div class="form-group">
+                        <label>فيديو حل الواجب</label>
+                        <input type="file" id="homeworkSolutionVideo" accept="video/*">
+                    </div>
+                    
+                    <div class="exam-section">
+                        <h3>أسئلة الامتحان</h3>
+                        <div id="examQuestionsContainer">
+                            <!-- Questions will be added here by JS -->
+                        </div>
+                        <button type="button" id="addQuestionBtn" class="add-btn">
+                            <i class="fas fa-plus"></i>
+                            إضافة سؤال جديد
+                        </button>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="lessonSubmitBtn">
+                        <i class="fas fa-upload"></i>
+                        <span>رفع الحصة</span>
+                    </button>
+                    <button type="button" class="cancel-btn" id="cancelEditLessonBtn" style="display: none; margin-top: 10px;" onclick="window.app.cancelEditLesson()">
+                        <i class="fas fa-times"></i>
+                        إلغاء التعديل
+                    </button>
+                </form>
+            </div>
+
+            <div class="content-list-container">
+                <h3>الحصص المرفوعة</h3>
+                <div id="teacherLessonsList" class="lessons-grid">
+                    <p>لا توجد حصص مرفوعة.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة إدارة الاشتراكات -->
+        <div id="manageSubscriptions" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>📦 إدارة الاشتراكات</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="subscriptionForm">
+                    <div class="form-group">
+                        <label>اسم الاشتراك</label>
+                        <input type="text" id="subscriptionName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>وصف الاشتراك</label>
+                        <textarea id="subscriptionDescription" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>سعر الاشتراك</label>
+                        <input type="number" id="subscriptionPrice" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>صورة الاشتراك</label>
+                        <input type="file" id="subscriptionImage" accept="image/*">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>مدة الاشتراك (بالأيام)</label>
+                        <input type="number" id="subscriptionDuration" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>الحصص المتضمنة</label>
+                        <div id="includedLessons">
+                            <p>سيتم عرض الحصص المتاحة هنا</p>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-plus"></i>
+                        إنشاء الاشتراك
+                    </button>
+                </form>
+            </div>
+            
+            <div class="content-list-container">
+                <h3>الاشتراكات الحالية</h3>
+                <div id="teacherSubscriptionsList">
+                    <p>لا توجد اشتراكات حالية.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة إدارة الدعم الفني -->
+        <div id="supportManagement" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>👀 مراقبة الدعم الفني</h2>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card" onclick="window.app.showAddSupportForm()">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>إضافة دعم جديد</h3>
+                </div>
+                
+                <div class="dashboard-card" onclick="window.app.showSupportList()">
+                    <i class="fas fa-users"></i>
+                    <h3>عرض فريق الدعم</h3>
+                </div>
+                
+                <div class="dashboard-card" onclick="window.app.showSupportActivity()">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>سجل النشاط</h3>
+                </div>
+                
+                <div class="dashboard-card" onclick="window.app.showSupportMessages()">
+                    <i class="fas fa-envelope"></i>
+                    <h3>رسائل الدعم</h3>
+                </div>
+            </div>
+            
+            <div id="supportContent" class="content">
+                <p>اختر إحدى الخيارات أعلاه</p>
+            </div>
+        </div>
+
+        <!-- صفحة عرض عمليات التحويل -->
+        <div id="transferOperations" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>💸 عمليات التحويل</h2>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3 id="totalTransfers">0 جنيه</h3>
+                    <p>إجمالي التحويلات</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3 id="confirmedTransfers">0</h3>
+                    <p>عمليات مؤكدة</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3 id="pendingTransfers">0</h3>
+                    <p>في الانتظار</p>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div id="transfersList">
+                    <p>لا توجد عمليات تحويل حتى الآن</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة إدارة وسائل الدفع -->
+        <div id="paymentMethods" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>💳 إدارة وسائل الدفع</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="paymentMethodForm">
+                    <h3>إضافة وسيلة دفع جديدة</h3>
+                    
+                    <div class="form-group">
+                        <label>اسم الوسيلة</label>
+                        <input type="text" id="paymentName" placeholder="مثال: فودافون كاش" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>رقم الحساب</label>
+                        <input type="text" id="paymentNumber" placeholder="رقم المحفظة أو الحساب" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>كلمة مرور التحكم</label>
+                        <input type="password" id="paymentPassword" placeholder="لحماية التعديل والحذف" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-plus"></i>
+                        إضافة وسيلة الدفع
+                    </button>
+                </form>
+                
+                <div class="payment-methods-list">
+                    <h3>وسائل الدفع الحالية</h3>
+                    <div id="currentPaymentMethods">
+                        <p>لا توجد وسائل دفع مضافة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة الرسائل العامة -->
+        <div id="generalMessages" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>📢 رسائل عامة للطلاب</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="generalMessageForm">
+                    <div class="form-group">
+                        <label>المستهدفون</label>
+                        <select id="messageTarget" required>
+                            <option value="">اختر المستهدفين</option>
+                            <option value="all">جميع الطلاب</option>
+                            <option value="first">طلاب الأول الثانوي</option>
+                            <option value="second">طلاب الثاني الثانوي</option>
+                            <option value="third">طلاب الثالث الثانوي</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>عنوان الرسالة</label>
+                        <input type="text" id="messageTitle" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>نص الرسالة</label>
+                        <textarea id="messageContent" rows="6" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>مدة عرض الرسالة (بالأيام)</label>
+                        <input type="number" id="messageDuration" min="1" max="30" value="7" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>أولوية الرسالة</label>
+                        <select id="messagePriority" required>
+                            <option value="normal">عادية</option>
+                            <option value="high">مهمة</option>
+                            <option value="urgent">عاجلة</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        إرسال الرسالة
+                    </button>
+                </form>
+                
+                <div class="sent-messages">
+                    <h3>الرسائل المرسلة</h3>
+                    <div id="sentMessagesList">
+                        <p>لا توجد رسائل مرسلة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة إدارة الكتب -->
+        <div id="manageBooks" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>📚 إدارة الكتب</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="bookForm">
+                    <div class="form-group">
+                        <label>اسم الكتاب</label>
+                        <input type="text" id="bookName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>وصف الكتاب</label>
+                        <textarea id="bookDescription" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>سعر الكتاب</label>
+                        <input type="number" id="bookPrice" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>الصف المستهدف</label>
+                        <select id="bookGrade" required>
+                            <option value="">اختر الصف</option>
+                            <option value="first">الأول الثانوي</option>
+                            <option value="second">الثاني الثانوي</option>
+                            <option value="third">الثالث الثانوي</option>
+                            <option value="all">جميع الصفوف</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>صورة الكتاب</label>
+                        <input type="file" id="bookImage" accept="image/*" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>حالة التوفر</label>
+                        <select id="bookAvailability" required>
+                            <option value="available">متوفر</option>
+                            <option value="limited">كمية محدودة</option>
+                            <option value="unavailable">غير متوفر</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-book"></i>
+                        إضافة الكتاب
+                    </button>
+                </form>
+                
+                <div class="books-list">
+                    <h3>الكتب المتاحة</h3>
+                    <div id="currentBooks">
+                        <p>لا توجد كتب مضافة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة رسائل الطلاب -->
+        <div id="studentMessages" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>💬 رسائل الطلاب</h2>
+            </div>
+            
+            <div class="messages-container">
+                <div class="messages-filters">
+                    <div class="filter-group">
+                        <label>فلترة حسب الحالة:</label>
+                        <select id="messageStatusFilter" onchange="window.app.loadStudentMessages()">
+                            <option value="all">جميع الرسائل</option>
+                            <option value="unread">غير مقروءة</option>
+                            <option value="read">مقروءة</option>
+                            <option value="replied">تم الرد عليها</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>فلترة حسب الصف:</label>
+                        <select id="messageGradeFilter" onchange="window.app.loadStudentMessages()">
+                            <option value="all">جميع الصفوف</option>
+                            <option value="first">الأول الثانوي</option>
+                            <option value="second">الثاني الثانوي</option>
+                            <option value="third">الثالث الثانوي</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="studentMessagesList" class="messages-list">
+                    <p>لا توجد رسائل من الطلاب</p>
+                </div>
+            </div>
+            
+            <!-- نافذة الرد على الرسالة -->
+            <div id="replyModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closeReplyModal()">&times;</span>
+                    <h3>الرد على الرسالة</h3>
+                    
+                    <div id="originalMessage" class="original-message"></div>
+                    
+                    <form id="replyForm">
+                        <div class="form-group">
+                            <label>نص الرد</label>
+                            <textarea id="replyText" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>رفع صورة (اختياري)</label>
+                            <input type="file" id="replyImage" accept="image/*">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>تسجيل صوتي (اختياري)</label>
+                            <div class="audio-controls">
+                                <button type="button" id="startRecording">🎤 بدء التسجيل</button>
+                                <button type="button" id="stopRecording" disabled>⏹️ إيقاف التسجيل</button>
+                                <audio id="audioPreview" controls style="display: none;"></audio>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-reply"></i>
+                            إرسال الرد
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة حظر الطلاب -->
+        <div id="banStudents" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🚫 حظر الطلاب</h2>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="studentSearch" placeholder="ابحث عن الطالب بالاسم أو رقم الطالب">
+                    <button onclick="window.app.searchAndFilterStudents('teacher')">
+                        <i class="fas fa-search"></i>
+                        بحث
+                    </button>
+                </div>
+                
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label>فلترة حسب الصف:</label>
+                        <select id="gradeFilter" onchange="window.app.searchAndFilterStudents('teacher')">
+                            <option value="all">جميع الصفوف</option>
+                            <option value="first">الأول الثانوي</option>
+                            <option value="second">الثاني الثانوي</option>
+                            <option value="third">الثالث الثانوي</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>فلترة حسب الحالة:</label>
+                        <select id="statusFilter" onchange="window.app.searchAndFilterStudents('teacher')">
+                            <option value="all">جميع الطلاب</option>
+                            <option value="active">نشط</option>
+                            <option value="banned">محظور</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="searchResults" class="search-results">
+                    <p>استخدم البحث أو الفلاتر للعثور على الطلاب</p>
+                </div>
+            </div>
+            
+            <div class="banned-students">
+                <h3>الطلاب المحظورون حالياً</h3>
+                <div id="bannedStudentsList">
+                    <p>لا يوجد طلاب محظورون</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة تعديل صورة الخلفية -->
+        <div id="editBackground" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="teacherDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🖼️ تعديل صورة الصفحات</h2>
+            </div>
+            
+            <div class="form-container">
+                <form id="backgroundForm">
+                    <div class="form-group">
+                        <label>رفع صورة خلفية جديدة</label>
+                        <input type="file" id="backgroundImage" accept="image/*" required>
+                        <small>ستظهر هذه الصورة كخلفية في جميع صفحات التطبيق</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>شفافية الصورة</label>
+                        <input type="range" id="backgroundOpacity" min="0.1" max="1" step="0.1" value="0.3">
+                        <span id="opacityValue">30%</span>
+                    </div>
+                    
+                    <div class="preview-container">
+                        <h4>معاينة الصورة:</h4>
+                        <div id="backgroundPreview" class="background-preview">
+                            <p>لم يتم اختيار صورة بعد</p>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-save"></i>
+                        حفظ التغييرات
+                    </button>
+                </form>
+                
+                <div class="current-background">
+                    <h4>الصورة الحالية:</h4>
+                    <div class="current-bg-preview">
+                        <img src="background.png" alt="الخلفية الحالية" style="max-width: 100%; border-radius: 10px;">
+                    </div>
+                    
+                    <button onclick="resetBackground()" class="reset-btn">
+                        <i class="fas fa-undo"></i>
+                        استعادة الصورة الافتراضية
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحات فرعية للدعم الفني -->
+        <div id="confirmPayments" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="supportDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>✔️ تأكيد عمليات الدفع</h2>
+            </div>
+            
+            <div class="payment-filters">
+                <h3>فلترة العمليات</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterPayments('all')">جميع العمليات</button>
+                    <button class="filter-btn" onclick="filterPayments('pending')">في الانتظار</button>
+                    <button class="filter-btn" onclick="filterPayments('today')">اليوم</button>
+                    <button class="filter-btn" onclick="filterPayments('week')">هذا الأسبوع</button>
+                </div>
+            </div>
+            
+            <div class="payments-list">
+                <div id="pendingPaymentsList">
+                    <!-- عمليات الدفع المعلقة ستظهر هنا -->
+                </div>
+            </div>
+        </div>
+
+        <div id="banStudentsSupport" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="supportDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🚫 حظر الطلاب</h2>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="studentSearchSupport" placeholder="ابحث عن الطالب بالاسم أو رقم الطالب" oninput="window.app.searchAndFilterStudents('support')">
+                    <button onclick="window.app.searchAndFilterStudents('support')">
+                        <i class="fas fa-search"></i>
+                        بحث
+                    </button>
+                </div>
+                
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label>فلترة حسب الصف:</label>
+                        <select id="gradeFilterSupport" onchange="window.app.searchAndFilterStudents('support')">
+                            <option value="all">جميع الصفوف</option>
+                            <option value="first">الأول الثانوي</option>
+                            <option value="second">الثاني الثانوي</option>
+                            <option value="third">الثالث الثانوي</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>فلترة حسب الحالة:</label>
+                        <select id="statusFilterSupport" onchange="window.app.searchAndFilterStudents('support')">
+                            <option value="all">جميع الطلاب</option>
+                            <option value="active">نشط</option>
+                            <option value="banned">محظور</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="studentSearchResults" class="search-results">
+                    <p>استخدم البحث للعثور على الطلاب أو اختر فلتر</p>
+                </div>
+            </div>
+            
+            <div class="banned-students">
+                <h3>الطلاب المحظورون حالياً</h3>
+                <div id="bannedStudentsListSupport">
+                    <!-- الطلاب المحظورون ستظهر هنا -->
+                </div>
+            </div>
+        </div>
+
+        <div id="studentOperations" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="supportDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>📊 عمليات الطلاب</h2>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 id="totalStudentsCount">0</h3>
+                    <p>إجمالي الطلاب</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3 id="studentsWithBalance">0</h3>
+                    <p>لديهم رصيد</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3 id="totalBalance">0 جنيه</h3>
+                    <p>إجمالي الرصيد</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 id="activeStudents">0</h3>
+                    <p>نشاط حديث</p>
+                </div>
+            </div>
+            
+            <div class="operations-filters">
+                <h3>فلترة الطلاب</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterStudentsByBalance('all')">جميع الطلاب</button>
+                    <button class="filter-btn" onclick="filterStudentsByBalance('hasBalance')">لديهم رصيد</button>
+                    <button class="filter-btn" onclick="filterStudentsByBalance('noBalance')">لا يوجد رصيد</button>
+                    <button class="filter-btn" onclick="filterStudentsByBalance('recentActivity')">نشاط حديث</button>
+                </div>
+            </div>
+            
+            <div class="operations-list">
+                <div id="studentOperationsList">
+                    <!-- عمليات الطلاب ستظهر هنا -->
+                </div>
+            </div>
+        </div>
+
+        <div id="supportChat" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="supportDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>💬 دردشة مع الطلاب</h2>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <h3>قائمة الطلاب</h3>
+                    <div class="student-list" id="studentChatList">
+                        <!-- قائمة الطلاب للدردشة ستظهر هنا -->
+                    </div>
+                </div>
+                
+                <div class="chat-area">
+                    <div class="chat-header" id="chatHeader" style="display: none;">
+                        <h4>المحادثة مع: <span id="currentChatStudent"></span></h4>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="no-chat-selected">
+                            <p>اختر طالباً لبدء المحادثة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input" id="chatInput" style="display: none;">
+                        <div class="input-group">
+                            <input type="text" id="messageInput" placeholder="اكتب رسالتك هنا..." onkeypress="window.app.handleChatKeyPress(event)">
+                            <button class="send-btn" onclick="window.app.sendChatMessage()">
+                                <i class="fas fa-paper-plane"></i>
+                                إرسال
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="examGrades" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="supportDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>📈 درجات الامتحانات</h2>
+            </div>
+            
+            <div class="grade-filters">
+                <h3>اختر الصف الدراسي</h3>
+                <div class="grade-buttons">
+                    <button class="grade-btn" onclick="viewGradesByClass('first')">
+                        <i class="fas fa-graduation-cap"></i>
+                        الأول الثانوي
+                    </button>
+                    <button class="grade-btn" onclick="viewGradesByClass('second')">
+                        <i class="fas fa-graduation-cap"></i>
+                        الثاني الثانوي
+                    </button>
+                    <button class="grade-btn" onclick="viewGradesByClass('third')">
+                        <i class="fas fa-graduation-cap"></i>
+                        الثالث الثانوي
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grades-container">
+                <div id="gradesList">
+                    <p>اختر صفاً دراسياً لعرض الدرجات</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة المحفظة -->
+        <div id="wallet" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>💳 المحفظة</h2>
+            </div>
+            
+            <div class="wallet-container">
+                <div class="current-balance">
+                    <div class="balance-card">
+                        <i class="fas fa-wallet"></i>
+                        <div class="balance-info">
+                            <h3>رصيدك الحالي</h3>
+                            <p id="walletBalance">0 جنيه</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="add-funds-section">
+                    <h3><i class="fas fa-plus-circle"></i> إضافة رصيد</h3>
+                    
+                    <form id="addFundsForm">
+                        <div class="form-group">
+                            <label>المبلغ المطلوب</label>
+                            <input type="number" id="transferAmount" min="1" required placeholder="أدخل المبلغ بالجنيه">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>وسيلة الدفع</label>
+                            <select id="paymentMethodSelect" required>
+                                <option value="">اختر وسيلة الدفع</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>رقم العملية/التحويل</label>
+                            <input type="text" id="transactionNumber" required placeholder="أدخل رقم التحويل">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>وقت التحويل</label>
+                            <input type="datetime-local" id="transferTime" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>رسالة إضافية (اختياري)</label>
+                            <textarea id="transferMessage" rows="3" placeholder="أي ملاحظات أو تفاصيل إضافية"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>صورة إيصال التحويل</label>
+                            <input type="file" id="transferReceipt" accept="image/*" required>
+                            <div id="receiptPreview" style="display: none;">
+                                <img id="receiptImg" style="max-width: 200px; max-height: 200px; border-radius: 8px;">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال طلب التحويل
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="transfer-history">
+                    <h3><i class="fas fa-history"></i> سجل العمليات</h3>
+                    <div id="transferHistoryList">
+                        <p>لا توجد عمليات سابقة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة الاشتراكات -->
+        <div id="subscriptions" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🧾 الاشتراكات</h2>
+            </div>
+            
+            <div class="subscriptions-container">
+                <div class="balance-display">
+                    <div class="balance-card">
+                        <i class="fas fa-wallet"></i>
+                        <div class="balance-info">
+                            <h3>رصيدك الحالي</h3>
+                            <p id="currentBalanceSubscriptions">0 جنيه</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="subscriptionsGrid" class="subscriptions-grid">
+                    <!-- الاشتراكات ستظهر هنا -->
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة محتوى الاشتراك -->
+        <div id="subscriptionContent" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="subscriptions">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2 id="subscriptionTitle">محتوى الاشتراك</h2>
+            </div>
+            
+            <div class="subscription-content-container">
+                <div class="subscription-info">
+                    <div id="subscriptionDetails"></div>
+                </div>
+                
+                <div class="subscription-lessons">
+                    <h3><i class="fas fa-play-circle"></i> الحصص المتاحة</h3>
+                    <div id="subscriptionLessonsGrid" class="subscription-lessons-grid">
+                        <!-- حصص الاشتراك ستظهر هنا -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة سجل النشاط -->
+        <div id="activityLog" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>📑 سجل النشاط</h2>
+            </div>
+            
+            <div class="activity-container">
+                <div class="activity-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3 id="totalExams">0</h3>
+                        <p>إجمالي الامتحانات</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3 id="passedExams">0</h3>
+                        <p>امتحانات ناجحة</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-percentage"></i>
+                        <h3 id="averageScore">0%</h3>
+                        <p>متوسط الدرجات</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3 id="successRate">0%</h3>
+                        <p>معدل النجاح</p>
+                    </div>
+                </div>
+                
+                <div class="activity-details">
+                    <div class="activity-section">
+                        <h3><i class="fas fa-chart-line"></i> الإحصائيات الأكاديمية</h3>
+                        <div class="academic-stats">
+                            <div class="stat-item">
+                                <span>الحصص المشتراة:</span>
+                                <strong id="totalLessons">0</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>الاشتراكات النشطة:</span>
+                                <strong id="totalSubscriptions">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-section">
+                        <h3><i class="fas fa-graduation-cap"></i> سجل الدرجات</h3>
+                        <div id="studentGradesList" class="grades-list">
+                            <!-- درجات الطالب ستظهر هنا -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة الكتب -->
+        <div id="books" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>📚 الكتب</h2>
+            </div>
+            
+            <div class="books-container">
+                <div class="balance-display">
+                    <div class="balance-card">
+                        <i class="fas fa-wallet"></i>
+                        <div class="balance-info">
+                            <h3>رصيدك الحالي</h3>
+                            <p id="currentBalanceBooks">0 جنيه</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="booksGrid" class="books-grid">
+                    <!-- الكتب ستظهر هنا -->
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة الإشعارات -->
+        <div id="notifications" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🛎️ الإشعارات</h2>
+            </div>
+            
+            <div class="notifications-container">
+                <div id="notificationsList" class="notifications-list">
+                    <!-- الإشعارات ستظهر هنا -->
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة المكافآت -->
+        <div id="rewards" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🏆 المكافآت</h2>
+            </div>
+            
+            <div class="rewards-container">
+                <div class="rewards-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-star"></i>
+                        <h3 id="currentPoints">0</h3>
+                        <p>النقاط الحالية</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-coins"></i>
+                        <h3 id="totalEarned">0</h3>
+                        <p>إجمالي النقاط المكتسبة</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-gift"></i>
+                        <h3 id="redeemedRewards">0</h3>
+                        <p>المكافآت المستبدلة</p>
+                    </div>
+                </div>
+                
+                <div class="rewards-content">
+                    <div class="rewards-section">
+                        <h3><i class="fas fa-shopping-cart"></i> المكافآت المتاحة</h3>
+                        <div id="availableRewardsList" class="available-rewards-list">
+                            <!-- المكافآت المتاحة ستظهر هنا -->
+                        </div>
+                    </div>
+                    
+                    <div class="rewards-section">
+                        <h3><i class="fas fa-history"></i> المكافآت المستبدلة</h3>
+                        <div id="redeemedRewardsList" class="redeemed-rewards-list">
+                            <!-- المكافآت المستبدلة ستظهر هنا -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة الدعم الفني للطالب -->
+        <div id="studentSupport" class="page">
+            <div class="page-header">
+                <button class="back-btn" data-target="studentDashboard">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <h2>🛠️ الدعم الفني</h2>
+            </div>
+            
+            <div class="student-chat-container">
+                <div class="chat-messages" id="studentChatMessages">
+                    <div class="no-chat-selected">
+                        <p>مرحباً بك في الدعم الفني. كيف يمكننا مساعدتك؟</p>
+                    </div>
+                </div>
+                
+                <div class="chat-input-area">
+                    <form id="studentSupportForm">
+                        <div class="input-group">
+                            <label for="studentSupportImage" class="attach-btn">
+                                <i class="fas fa-paperclip"></i>
+                                <input type="file" id="studentSupportImage" accept="image/*" style="display: none;">
+                            </label>
+                            <textarea id="studentSupportMessage" placeholder="اكتب رسالتك هنا..." rows="1"></textarea>
+                            <button type="submit" class="send-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                         <div id="studentSupportImagePreview" style="display: none; text-align: center; margin-top: 10px; position: relative; display: inline-block;">
+                            <img id="studentSupportPreviewImg" style="max-width: 150px; max-height: 150px; border-radius: 8px;">
+                            <button type="button" onclick="window.app.clearStudentSupportImage()" class="clear-preview-btn">&times;</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
